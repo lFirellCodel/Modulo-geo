@@ -18,12 +18,13 @@
     <body>
 <table border="1" class="table table-striped table-bordered table-hover">
     <thead>
-        <tr class="success">
+        <tr class="success text-center">
             
             <td>LATITUD</td>
             <td>LONGITUD</td>
             <td>DIRECCION</td>
             <td>EDIFICIO</td>
+            <td colspan="2">ACCIONES</td>
         </tr>
     </thead>
     <tbody>

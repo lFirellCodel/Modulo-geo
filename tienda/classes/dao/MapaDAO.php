@@ -34,20 +34,23 @@ class MapaDAO {
     }
      
     public static function update($mapa){
-        
-        $query = "UPDATE gmap SET lat=:lat, lng=:lng, direc=:direc, edif=:edif"
-                . "WHERE id=:id";
+
+        $query = "UPDATE gmap SET lat = $mapa->lat , lng = $mapa->lng , direc= '$mapa->direc' , edif='$mapa->edif' WHERE id= $mapa->id";
         
         $con = Conexion::getConexion();
         $stmt = $con->prepare($query); 
-        
 
-        $stmt->bindParam(':lat', $mapa->lat);
+
+        /*$stmt->bindParam(':lat', $mapa->lat);
         $stmt->bindParam(':lng', $mapa->lng);
         $stmt->bindParam(':direc', $mapa->direc);
         $stmt->bindParam(':edif', $mapa->edif);
-        $stmt->bindParam(':id', $mapa->id);
-        $stmt->execute();
+        $stmt->bindParam(':id', $mapa->id);*/
+        
+        $result = $stmt->execute();
+
+        return $result;
+
     }
     public static function eliminar($id) {
         
