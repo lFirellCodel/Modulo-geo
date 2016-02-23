@@ -1,0 +1,70 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+    font-family: 'Noto Sans', sans-serif;
+    /*font-family: arial;*/
+    font-size: 12px;
+    
+    margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+.header{
+    background: #00aeef;
+    color: white;
+}
+
+.header .logo-header{
+    padding: 20px 0px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+.footer .text-footer{
+    padding: 20px 0px;
+    line-height: 20px;
+    text-align: center;
+}
+
+#flash{
+    border: 1px solid orange;
+    background-color: yellow;
+    text-align: center;
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    /*height: 100px;*/
+    display: table;
+    margin-top: -50px;
+}
+#flash p{
+    font-size: 14px;
+    color: green;
+    line-height: 40px;
+}
+
+#flash.error{
+    border: 1px solid darkred;
+    background-color: red;
+}
+#flash.error p{
+    color: white;
+}
+
+img[onclick]{
+    cursor: pointer;
+}
+#busca{
+    margin: 0 auto;
+}
